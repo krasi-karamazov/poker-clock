@@ -4,7 +4,7 @@ package com.melontech.pokerclock.activities;
 import com.melontech.pokerclock.R;
 import com.melontech.pokerclock.components.VerticalSeekBar;
 import com.melontech.pokerclock.constants.Constants;
-import com.melontech.pokerclock.fragments.PokerClockDialogFragment;
+import com.melontech.pokerclock.fragments.PokerClockChangeConfirmationDialogFragment;
 import com.melontech.pokerclock.listeners.EditPromptConfirmationListener;
 import com.melontech.pokerclock.statsobjects.TournamentStatObjectModel;
 
@@ -18,7 +18,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
-import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
@@ -29,8 +28,9 @@ public class EditTournamentActivity extends FragmentActivity implements EditProm
 	private TextView mLevelTimeField;
 	private ToggleButton mSoundOnButton;
 	private VerticalSeekBar mSeekBar;
-	private final EditTournamentActivityClickListener mClickListener = new EditTournamentActivityClickListener();
-	private final SeekBarScrollListener mScrollListener = new SeekBarScrollListener();
+	public static final int REQUEST_CODE = 558;
+	public static final int RESULT = 558;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 
@@ -44,14 +44,48 @@ public class EditTournamentActivity extends FragmentActivity implements EditProm
 		Button blindsButton = (Button)findViewById(R.id.blindsButton);
 		Button payoutsButton = (Button)findViewById(R.id.payoutsButton);
 		
-		blindsButton.setOnClickListener(mClickListener);
-		payoutsButton.setOnClickListener(mClickListener);
+		blindsButton.setOnClickListener(mButtonClickListener);
+		payoutsButton.setOnClickListener(mButtonClickListener);
 		
 		mSeekBar = (VerticalSeekBar)findViewById(R.id.seek_bar);
 		mSeekBar.setMax(Constants.VERTICAL_SEEKBAR_MAX_VALUE);
-		mSeekBar.setOnSeekBarChangeListener(mScrollListener);
+		mSeekBar.setOnSeekBarChangeListener(mMinutesPerLevelListener);
 		setInfo();
 	}
+	
+	private SeekBar.OnSeekBarChangeListener mMinutesPerLevelListener = new SeekBar.OnSeekBarChangeListener() {
+		public void onStopTrackingTouch(SeekBar seekBar) {}
+		
+		public void onStartTrackingTouch(SeekBar seekBar) {}
+		
+		public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+			mLevelTimeField.setText(Integer.valueOf(progress).toString());
+		}
+	};
+	
+	private View.OnClickListener mButtonClickListener = new View.OnClickListener() {
+		public void onClick(View v) {
+			Intent intent = null;
+			switch(v.getId()) {
+				case R.id.payoutsButton:
+					intent = new Intent(EditTournamentActivity.this, PayoutsActivity.class);
+					
+					intent.putExtra(Constants.SELECTED_TOURNAMENT_PAYOUTS_KEY, mTournament.getPayouts());
+					Log.d("STARTING", "PAYOUT");
+					startActivityForResult(intent, 0);
+					break;
+				case R.id.blindsButton:
+					Log.d("STARTING", "BLINDS");
+//					intent = new Intent(TournamentInfoActivity.this, BlindsListActivity.class);
+//					
+//					intent.putExtra("selectedTournament", selectedTournament);
+//					
+//					startActivityForResult(intent, 0);
+					break;
+			}
+		}
+	};
+
 	
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
@@ -94,16 +128,6 @@ public class EditTournamentActivity extends FragmentActivity implements EditProm
 			mSoundOnButton.setChecked(Boolean.valueOf(true));
 		}
 	}
-
-	private class SeekBarScrollListener implements OnSeekBarChangeListener {
-		public void onStopTrackingTouch(SeekBar seekBar) {}
-		
-		public void onStartTrackingTouch(SeekBar seekBar) {}
-		
-		public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-			mLevelTimeField.setText(Integer.valueOf(progress).toString());
-		}
-	}
 	
 	@Override
 	public void onBackPressed() {
@@ -124,35 +148,13 @@ public class EditTournamentActivity extends FragmentActivity implements EditProm
 			FragmentManager fm = getSupportFragmentManager();
 			Bundle args = new Bundle();
 			args.putString(Constants.TOURNAMENT_STATS_CHANGED_PROMPT_FRAGMENT_KEY, mTournamentNameField.getText().toString());
-	        PokerClockDialogFragment editConfirmationPrompt = PokerClockDialogFragment.getInstance(args);
+	        PokerClockChangeConfirmationDialogFragment editConfirmationPrompt = PokerClockChangeConfirmationDialogFragment.getInstance(args);
 	        editConfirmationPrompt.show(fm, "fragment_confirmation_prompt");
 		}
 		
 	}
 
-	private class EditTournamentActivityClickListener implements View.OnClickListener {
-		public void onClick(View v) {
-			Intent intent = null;
-			switch(v.getId()) {
-				case R.id.payoutsButton:
-//					intent = new Intent(EditTournamentActivity.this, PayoutsActivity.class);
-//					
-//					intent.putExtra("selectedTournament", selectedTournament);
-					Log.d("STARTING", "PAYOUT");
-//					startActivityForResult(intent, 0);
-					break;
-				case R.id.blindsButton:
-					Log.d("STARTING", "BLINDS");
-//					intent = new Intent(TournamentInfoActivity.this, BlindsListActivity.class);
-//					
-//					intent.putExtra("selectedTournament", selectedTournament);
-//					
-//					startActivityForResult(intent, 0);
-					break;
-			}
-		}
-	}
-
+	
 	public void promptResponse(int response) {
 		switch(response){
 			case DialogInterface.BUTTON_POSITIVE:
@@ -160,7 +162,6 @@ public class EditTournamentActivity extends FragmentActivity implements EditProm
 				mTournament.addToDatabase();
 				setResult(TournamentsListActivity.RESULT_CODE_ADDED);
 			}else {
-				Log.d("CHECK TOURNAMENT", "UPDATE " + mTournament.getName());
 				mTournament.update();
 				setResult(TournamentsListActivity.RESULT_CODE_EDITED);
 			}

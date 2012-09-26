@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import kpk.dbaccesswrapper.accessor.entities.AbstractObjectModel;
 
 import com.melontech.pokerclock.statsobjects.TournamentStatObjectModel;
-import com.melontech.pokerclock.utils.ObjectParser;
+import com.melontech.pokerclock.utils.ObjectRetriever;
 
 public class Constants {
 	public static final String DEFAULT_TOURNAMENT_NAME = "Default Tournament";
@@ -33,9 +33,11 @@ public class Constants {
     		Constants.DEFAULT_TOURNAMENT_LEVEL_TIME, Boolean.valueOf(Constants.DEFAULT_TOURNAMENT_SOUND_ON).toString(),
     		Constants.DEFAULT_TOURNAMENT_SMALL_BLINDS, Constants.DEFAULT_TOURNAMENT_BIG_BLINDS, Constants.DEFAULT_TOURNAMENT_ANTES, 
     		Constants.DEFAULT_TOURNAMENT_PAYOUTS);
-	public static final ArrayList<AbstractObjectModel> DEFAULT_BLINDS = ObjectParser.inflateDefaultData(ObjectParser.BLINDS_TYPE);
-	public static final ArrayList<AbstractObjectModel> DEFAULT_PAYOUTS = ObjectParser.inflateDefaultData(ObjectParser.PAYOUTS_TYPE);
+	public static final ArrayList<AbstractObjectModel> DEFAULT_BLINDS = ObjectRetriever.inflateDefaultData(ObjectRetriever.BLINDS_TYPE);
+	public static final ArrayList<AbstractObjectModel> DEFAULT_PAYOUTS = ObjectRetriever.inflateDefaultData(ObjectRetriever.PAYOUTS_TYPE);
 	public static final String SELECTED_TOURNAMENT_KEY = "selectedTournament";
+	public static final String SELECTED_TOURNAMENT_PAYOUTS_KEY = "selectedTournamentPayouts";
+	public static final String SELECTED_TOURNAMENT_BLINDS_KEY = "selectedTournamentBlinds";
 	public static final String NEW_TOURNAMENT_KEY = "newTournament";
 	public static final String SAVED_INSTANCE_TOURNAMENT_KEY = "savedTournament";
 	public static final String SAVED_INSTANCE_INITIAL_TOURNAMENT_KEY = "savedInitTournament";

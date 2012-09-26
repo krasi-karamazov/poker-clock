@@ -10,7 +10,7 @@ import com.melontech.pokerclock.constants.Constants;
 import com.melontech.pokerclock.statsobjects.BlindsStatObjectModel;
 import com.melontech.pokerclock.statsobjects.PayoutsStatObjectModel;
 import com.melontech.pokerclock.statsobjects.TournamentStatObjectModel;
-import com.melontech.pokerclock.utils.ObjectParser;
+import com.melontech.pokerclock.utils.ObjectRetriever;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -69,7 +69,7 @@ public class TournamentsListActivity extends SuperActivity {
 	}
 	
 	private void drawList() {
-		mTournamentList = ObjectParser.getAllItemsOfType(ObjectParser.TOURNAMENT_TYPE);
+		mTournamentList = ObjectRetriever.getAllItemsOfType(ObjectRetriever.TOURNAMENT_TYPE);
 		mAdapter = new TournamentsListAdapter(TournamentsListActivity.this, R.layout.tournament_row_layout, mTournamentList);
 		mTournamentsListView.setAdapter(mAdapter);
 	}
@@ -99,8 +99,8 @@ public class TournamentsListActivity extends SuperActivity {
 	private void startChildActivity(TournamentStatObjectModel tournament) {
 		Intent editIntent = new Intent(TournamentsListActivity.this, EditTournamentActivity.class);
 		if(tournament == null) {
-			BlindsStatObjectModel blindsPreset = (BlindsStatObjectModel)ObjectParser.getItemAt(ObjectParser.BLINDS_TYPE, 1);
-			PayoutsStatObjectModel payoutsPreset = (PayoutsStatObjectModel)ObjectParser.getItemAt(ObjectParser.PAYOUTS_TYPE, 1);
+			BlindsStatObjectModel blindsPreset = (BlindsStatObjectModel)ObjectRetriever.getItemAt(ObjectRetriever.BLINDS_TYPE, 1);
+			PayoutsStatObjectModel payoutsPreset = (PayoutsStatObjectModel)ObjectRetriever.getItemAt(ObjectRetriever.PAYOUTS_TYPE, 1);
 			tournament = new TournamentStatObjectModel("", Constants.DEFAULT_TOURNAMENT_LEVEL_TIME, "true", blindsPreset.smallBlinds, blindsPreset.bigBlinds, blindsPreset.antes, payoutsPreset.payouts);
 			editIntent.putExtra(Constants.NEW_TOURNAMENT_KEY, tournament);
 		}else {

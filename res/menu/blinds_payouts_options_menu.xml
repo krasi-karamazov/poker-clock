@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-   	<item android:id="@+id/insertPrize" android:title="@string/list_menu_insert"/> 
-	<item android:id="@+id/clearAll" android:title="@string/list_menu_clear"/>
-	<item android:id="@+id/loadPreset" android:title="@string/list_menu_load_preset"/>
-	<item android:id="@+id/saveAs" android:title="@string/list_menu_save_as"/>
-	<item android:id="@+id/removePreset" android:title="@string/list_menu_remove_preset"/>
-</menu>

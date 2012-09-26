@@ -40,7 +40,7 @@ public final class R {
     }
     public static final class id {
         public static final int add_item=0x7f0a0004;
-        public static final int add_tournament_button=0x7f0a0039;
+        public static final int add_tournament_button=0x7f0a003c;
         public static final int ante=0x7f0a000a;
         public static final int ante_text=0x7f0a0022;
         public static final int antes_label=0x7f0a0021;
@@ -49,7 +49,7 @@ public final class R {
         public static final int blinds_label=0x7f0a001f;
         public static final int blinds_text=0x7f0a0020;
         public static final int buttons_container=0x7f0a000f;
-        public static final int clearAll=0x7f0a003d;
+        public static final int clearAll=0x7f0a0040;
         public static final int clock_display=0x7f0a001d;
         public static final int container=0x7f0a0017;
         public static final int deleteButtonPayoutsDialog=0x7f0a0027;
@@ -57,36 +57,39 @@ public final class R {
         public static final int doNotRecalculate=0x7f0a0030;
         public static final int editButton=0x7f0a000b;
         public static final int edit_button_main_activity=0x7f0a0025;
+        public static final int edit_payouts_button=0x7f0a0033;
         public static final int game_fragment=0x7f0a0018;
-        public static final int insertPrize=0x7f0a003c;
+        public static final int insertPrize=0x7f0a003f;
         public static final int iq_field=0x7f0a0003;
         public static final int items_list=0x7f0a0023;
         public static final int layout_hint=0x7f0a001e;
         public static final int levelNum=0x7f0a0007;
         public static final int levelNumPayouts=0x7f0a002b;
         public static final int listView=0x7f0a0006;
-        public static final int loadPreset=0x7f0a003e;
-        public static final int menu_settings=0x7f0a003b;
+        public static final int loadPreset=0x7f0a0041;
+        public static final int menu_settings=0x7f0a003e;
         public static final int minutes_label_text=0x7f0a0015;
         public static final int odds_button=0x7f0a0019;
-        public static final int optionsList=0x7f0a0036;
+        public static final int optionsList=0x7f0a0039;
         public static final int pass_field=0x7f0a0001;
         public static final int pause_tournament_button=0x7f0a001b;
         public static final int payoutsButton=0x7f0a0011;
         public static final int payoutsInfo=0x7f0a002a;
         public static final int payouts_list=0x7f0a002d;
-        public static final int payouts_list_view=0x7f0a0037;
-        public static final int presetName=0x7f0a0033;
-        public static final int presetsList=0x7f0a0031;
+        public static final int payouts_list_view=0x7f0a003a;
+        public static final int place_field=0x7f0a0031;
+        public static final int presetName=0x7f0a0036;
+        public static final int presetsList=0x7f0a0034;
         public static final int prizeDialogvalue=0x7f0a0029;
         public static final int prizePercentlabel=0x7f0a0028;
         public static final int prizeValue=0x7f0a002c;
-        public static final int realtabcontent=0x7f0a0034;
+        public static final int prize_field=0x7f0a0032;
+        public static final int realtabcontent=0x7f0a0037;
         public static final int recalculateAuto=0x7f0a002f;
         public static final int recalculateManual=0x7f0a002e;
-        public static final int removePreset=0x7f0a0040;
-        public static final int row_label=0x7f0a0032;
-        public static final int saveAs=0x7f0a003f;
+        public static final int removePreset=0x7f0a0043;
+        public static final int row_label=0x7f0a0035;
+        public static final int saveAs=0x7f0a0042;
         public static final int save_item=0x7f0a000c;
         public static final int seek_bar=0x7f0a0014;
         public static final int smallBlind=0x7f0a0008;
@@ -94,13 +97,13 @@ public final class R {
         public static final int sound_container=0x7f0a0012;
         public static final int start_button_main_activity=0x7f0a0026;
         public static final int stop_tournament_button=0x7f0a001a;
-        public static final int table_viewer=0x7f0a0035;
+        public static final int table_viewer=0x7f0a0038;
         public static final int title_view=0x7f0a0024;
         public static final int top_display=0x7f0a001c;
         public static final int tournament_leveltime_field=0x7f0a0016;
         public static final int tournament_name_field=0x7f0a000e;
-        public static final int tournament_row_name_field=0x7f0a0038;
-        public static final int tournaments_list=0x7f0a003a;
+        public static final int tournament_row_name_field=0x7f0a003b;
+        public static final int tournaments_list=0x7f0a003d;
         public static final int user_field=0x7f0a0000;
         public static final int view_items=0x7f0a0005;
         public static final int weight_field=0x7f0a0002;
@@ -119,9 +122,9 @@ public final class R {
         public static final int payouts_edit_dialog=0x7f03000a;
         public static final int payouts_game_list=0x7f03000b;
         public static final int payouts_game_screen=0x7f03000c;
-        public static final int payouts_list_view=0x7f03000d;
+        public static final int payouts_list_layout=0x7f03000d;
         public static final int payouts_recalculate_dialog=0x7f03000e;
-        public static final int payouts_row=0x7f03000f;
+        public static final int payouts_row_layout=0x7f03000f;
         public static final int presets_list=0x7f030010;
         public static final int recalculate_payouts_dialog=0x7f030011;
         public static final int row_layout=0x7f030012;
@@ -135,8 +138,8 @@ public final class R {
     }
     public static final class menu {
         public static final int activity_main=0x7f090000;
-        public static final int blinds_payouts_options_menu=0x7f090001;
-        public static final int tournament_save_menu=0x7f090002;
+        public static final int stats_options_menu=0x7f090001;
+        public static final int tournament_save_options_menu=0x7f090002;
     }
     public static final class raw {
         public static final int timer=0x7f050000;
