@@ -30,6 +30,7 @@ public class PokerClockApplication extends Application {
 	}
 	
 	private void initDatabase() {
+		Log.d(sTAG, "YES");
 		final SQLiteDatabaseBuilder builder = SQLiteDatabaseBuilder.getInstance();
 		final TournamentStatObjectModel tempTour = new TournamentStatObjectModel();
 		final BlindsStatObjectModel tempBlinds = new BlindsStatObjectModel();
