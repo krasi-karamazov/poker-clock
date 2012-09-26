@@ -10,12 +10,12 @@ public class ObjectParser {
 	public static final int TOURNAMENT_TYPE = 1;
 	public static final int PAYOUTS_TYPE = 2;
 	@SuppressWarnings("unchecked")
-	public static <T extends AbstractListModel> ArrayList<T> parseObject(int type, String stringToParse) {
+	public static <T extends AbstractListModel> ArrayList<T> inflateObject(int type, String... args) {
 		final ArrayList<T> objectCollection = new ArrayList<T>();
 		switch(type){
 			case PAYOUTS_TYPE:
 				
-				String[] arr = stringToParse.split(",");
+				String[] arr = args[0].split(",");
 				int place = 0;
 				for(String s : arr) {
 					

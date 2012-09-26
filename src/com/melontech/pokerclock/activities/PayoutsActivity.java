@@ -33,9 +33,9 @@ public class PayoutsActivity extends FragmentActivity implements PayoutsChangeLi
 	
 	private void setInfo(Bundle savedState) {
 		if(savedState == null) {
-			mList =  ObjectParser.parseObject(ObjectParser.PAYOUTS_TYPE, getIntent().getStringExtra(Constants.SELECTED_TOURNAMENT_PAYOUTS_KEY));
+			mList =  ObjectParser.inflateObject(ObjectParser.PAYOUTS_TYPE, getIntent().getStringExtra(Constants.SELECTED_TOURNAMENT_PAYOUTS_KEY));
 		}else{
-			mList =  ObjectParser.parseObject(ObjectParser.PAYOUTS_TYPE, savedState.getString(Constants.SELECTED_TOURNAMENT_PAYOUTS_KEY));
+			mList =  ObjectParser.inflateObject(ObjectParser.PAYOUTS_TYPE, savedState.getString(Constants.SELECTED_TOURNAMENT_PAYOUTS_KEY));
 		}
 		
 		mAdapter = new PayoutsAdapter(PayoutsActivity.this, R.layout.payouts_row_layout, mList);

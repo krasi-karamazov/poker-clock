@@ -29,4 +29,10 @@ public class PayoutsListModel extends AbstractListModel {
 		// TODO Auto-generated method stub
 		return "Payout";
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return PayoutsListModel.class.getSimpleName() + " Place: " + Integer.valueOf(this.mPlace) + ", Prize: " + this.mPrize;
+	}
 }
