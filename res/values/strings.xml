@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Main!</string>
+    <string name="app_name">PokerClock</string>
+	<string name="start_tournament_button">Start Tournament</string>
+	<string name="edit_tournament_button">Edit Tournament</string>
+	<string name="context_start">Start</string>
+	<string name="delete_label">Delete</string>
+	<string name="edit_label">Edit</string>
+	<string name="context_menu_tournaments_title">Options</string>
+	<string name="tournament_info_name">Name</string>
+	<string name="tournament_info_sound">Alarm\nsound</string>
+	<string name="tournament_info_leveltime">Level Time</string>
+	<string name="minutes_label">Minutes\nper level</string>
+	<string name="blinds_button_label">Blinds</string>
+	<string name="payouts_button_label">Payouts</string>
+	<string name="save_tournament_button">Save</string>
+	<string name="positive_dialog_label">OK</string>
+	<string name="negative_dialog_label">Cancel</string>
+	<string name="small_blinds_label">Small Blind</string>
+	<string name="big_blinds_label">Big Blind</string>
+	<string name="antes_label">Ante</string>
+	<string name="list_menu_insert">Insert</string>
+	<string name="list_menu_clear">Clear All</string>
+	<string name="list_menu_load_preset">Load Preset</string>
+	<string name="list_menu_save_as">Save As</string>
+	<string name="list_menu_remove_preset">Remove Preset</string>
+	<string name="tournament_add_item">Add New Tournament</string>
+	<string name="tournament_stats_changed_prompt_message">The current tournament stats have been changed. Would you like to save your changes?</string>
+	<string name="blinds_final_dialog_title">Blinds Change</string>
+	<string name="payouts_final_dialog_title">Payouts Change</string>
+	<string name="blinds_final_dialog_positive">Yes</string>
+	<string name="blinds_final_dialog_negative">No</string>
+	<string name="tournament_save_toast_text">Please input a name for the tournament</string>
+	<string name="cannot_delete_default">Cannot delete default data</string>
+	<string name="save_preset_error_toast">You have to type a preset name</string>
+	<string name="prize_percent_label">Prize %</string>
+	<string name="blinds_preset_title">Blinds Presets</string>
+	<string name="payouts_preset_title">Payouts Presets</string>
+	<string name="adjust_payouts_dialog_message">The sum of the current payout percent is not than 100%. Would you like to adjust them?</string>
+	<string name="recalculate_manual">Yes (manual)</string>
+	<string name="recalculate_auto">Yes (auto)</string>
+	<string name="do_not_recalculate">No</string>
+	<string name="total">Total: </string>
+	<string name="Blinds">Blinds</string>
+	<string name="Ante">Ante</string>
+	<string name="NextLevel">Next Level</string>
+	<string name="LevelWord">Level</string>
+	<string name="LevelTimeWord">Level Time</string>
+	<string name="PlaceWord">Place</string>
+	<string name="tournament_name">Tournament Name</string>
+	<string name="game_screen_hint">*Swipe left/right to jump to another level</string>
+	<string name="game_screen_odds">ODDS</string>
+	<string name="about_string">poker button image</string>
+	<string name="temp_string">LEVEL 1</string>
+	<string name="temp_string1">TOTAL: 00:02:47</string>
+	
+	<string-array name="context_menu_items">
+	    <item>Edit</item>
+	    <item>Delete</item>
+	    <item>Start</item>
+	</string-array>
+</resources>

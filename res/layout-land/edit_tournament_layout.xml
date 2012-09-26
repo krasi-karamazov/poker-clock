@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:orientation="vertical" android:padding="10dp"
+	android:background="@drawable/leather">
+
+    <EditText
+	android:id="@+id/tournament_name_field"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:gravity="center"
+	android:hint="@string/tournament_info_name"
+	android:textColorHint="#0099cc"
+	style="@style/text_view_top_dark"
+	/>
+    
+    <LinearLayout 
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+		android:orientation="horizontal"
+		android:gravity="center_horizontal"
+		android:layout_alignParentBottom="true"
+		>
+	<Button 
+		    android:id="@+id/blindsButton"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:layout_marginRight="10dp"
+		    android:textColor="#ffffff"
+		    android:text="@string/blinds_button_label"
+		    android:background="@drawable/poker_button_style"/>
+		<Button 
+		    android:id="@+id/payoutsButton"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:layout_marginLeft="10dp"
+		    android:textColor="#ffffff"
+		    android:text="@string/payouts_button_label"
+		    android:background="@drawable/poker_button_style"/>
+	</LinearLayout>
+	
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons_container"
+        android:layout_below="@+id/tournament_name_field"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+        
+       	<LinearLayout 
+       	    android:id="@+id/sound_container"
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content" 
+			android:orientation="vertical"
+			android:gravity="center_horizontal"
+			android:layout_centerVertical="true"
+			android:layout_marginBottom="20dp"
+			>
+	        
+			<TextView 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:text="@string/tournament_info_sound"
+		      android:gravity="center_horizontal"
+		      android:textColor="#ffffff"
+		      android:textStyle="bold"
+		      />
+			
+			<ToggleButton
+				android:id="@+id/soundCheckBox"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal"
+				style="@style/Widget.Button.Toggle"/>
+		    
+		</LinearLayout>
+        
+	    
+	    
+	    
+	    
+	   <TextView 
+            android:id="@+id/tournament_leveltime_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_view_small_dark"
+            android:text="17"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+	   
+	   <com.melontech.pokerclock.components.VerticalSeekBar
+	            android:id="@+id/seek_bar" 
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:thumb="@drawable/thumb"
+	            android:progressDrawable="@drawable/track"
+	            android:layout_toLeftOf="@+id/tournament_leveltime_field"
+	            android:minHeight="11dip"
+			   	android:maxHeight="11dip"
+			    android:paddingLeft="30dp"
+			    android:paddingRight="30dp"/>
+	   <TextView 
+            android:id="@+id/minutes_label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:text="@string/minutes_label"
+            android:layout_toLeftOf="@+id/seek_bar"
+            android:layout_centerVertical="true"/>
+        
+    </RelativeLayout>
+	 
+</RelativeLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@drawable/leather"
+    >
+    
+	<LinearLayout 
+	    android:id="@+id/buttons_container"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	 	android:layout_marginBottom="5dip"
+	    android:layout_alignParentBottom="true">
+	    
+	    <ImageButton
+	        android:id="@+id/stop_tournament_button"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:layout_marginBottom="5dip"
+	        android:background="@drawable/poker_button_style"
+	        android:src="@drawable/stop_poker_button" 
+	        android:contentDescription="@string/about_string"
+	        android:layout_marginRight="10dip"/>
+	
+	    <ImageButton
+	        android:id="@+id/pause_tournament_button"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:layout_marginBottom="5dip"
+	        android:background="@drawable/poker_button_style"
+	        android:src="@drawable/pause_clock_button"
+	        android:contentDescription="@string/about_string"
+	        android:layout_marginLeft="10dip"/>
+	</LinearLayout>
+   
+    <TextView 
+        android:id="@+id/top_display"
+	    style="@style/text_view_top_dark" 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/temp_string"/>
+       
+    <TextView
+        android:id="@+id/clock_display"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_display"
+        android:gravity="center"
+        android:textSize="60dp"
+        android:textStyle="bold" 
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"/>
+    
+    <TextView
+        android:id="@+id/layout_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/clock_display"
+        android:gravity="center_horizontal"
+        android:textSize="12sp"
+        android:text="@string/game_screen_hint" />
+    <Button
+        android:id="@+id/odds_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/poker_button_style"
+        android:text="@string/game_screen_odds"
+        android:textColor="#ffffff"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons_container"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
+        
+        <TextView 
+        android:id="@+id/blinds_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:text="@string/blinds_button_label"
+        />
+    
+    <TextView 
+        android:id="@+id/blinds_text"
+        style="@style/text_view_small_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_string"
+        />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons_container"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
+        
+        <TextView 
+        android:id="@+id/antes_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="@string/antes_label"
+        />
+    
+    <TextView 
+        android:id="@+id/ante_text"
+        style="@style/text_view_small_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_string"
+        />
+    </LinearLayout>
+    
+    
+
+</RelativeLayout>

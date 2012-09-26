@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="10sp">
+    <TableLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+		    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="left" android:paddingBottom="10sp" android:textSize="25sp"/>
+		    <Button android:id="@+id/deleteButtonPayoutsDialog" android:layout_width="match_parent" android:layout_weight="1" android:text="@string/delete_label" />
+		</TableRow>
+		<TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+			<TextView android:id="@+id/prizePercentlabel" android:text="@string/prize_percent_label" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal"/>
+		</TableRow>
+		<TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+			<EditText android:inputType="number" android:id="@+id/prizeDialogvalue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal" android:paddingLeft="3sp"/>
+		</TableRow>
+    </TableLayout>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+<!--     <Button android:id="@+id/okButtonPayoutsDialog" android:text="@string/positive_dialog" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/> -->
+<!-- 	<Button android:id="@+id/cancelButtonPayoutsDialog" android:text="@string/negative_dialog" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center"/> -->
+</LinearLayout>
+
+</LinearLayout>

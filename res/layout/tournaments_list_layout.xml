@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/leather">
+    
+
+<Button 
+    android:id="@+id/add_tournament_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/tournament_add_item"
+    android:background="@drawable/poker_button_style"
+    android:textColor="#ffffff"
+    android:layout_alignParentBottom="true"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"/>
+
+<ListView android:id="@+id/tournaments_list" 
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/add_tournament_button"
+    android:layout_alignParentTop="true"
+    android:cacheColorHint="@android:color/transparent"
+    android:scrollingCache="true"
+    ></ListView>
+</RelativeLayout>

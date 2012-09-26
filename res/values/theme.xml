@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="poker_style" parent="android:Theme.NoTitleBar.Fullscreen">
+        <item name="android:background">@drawable/leather</item>
+    </style>
+    <style name="text_view_top_dark" parent="@android:style/TextAppearance">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#0099cc</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/text_view_top</item>
+    </style>
+    
+    <style name="text_view_small_dark" parent="@android:style/TextAppearance">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#0099cc</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/small_black_rect</item>
+    </style>
+</resources>

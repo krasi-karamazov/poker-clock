@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="10sp">
+<!--     <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content"> -->
+<!--         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content"> -->
+<!-- 		    <TextView android:id="@+id/levemNumlabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="left" android:paddingBottom="10sp" android:textSize="25sp"/> -->
+<!-- 		    <Button android:id="@+id/deleteButtonBlindsDialog" android:layout_width="match_parent" android:layout_weight="1" android:text="@string/delete_button" /> -->
+<!-- 		</TableRow> -->
+<!-- 		<TableRow android:layout_width="match_parent" android:layout_height="wrap_content"> -->
+<!-- 		    <TextView android:id="@+id/smallBlindsValueLabel" android:text="@string/small_blinds_label" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal"/> -->
+<!-- 			<TextView android:id="@+id/bigBlindsValueLabel" android:text="@string/big_blinds_label" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal"/> -->
+<!-- 			<TextView android:id="@+id/anteValueLabel" android:text="@string/antes_label" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal"/> -->
+<!-- 		</TableRow> -->
+<!-- 		<TableRow android:layout_width="match_parent" android:layout_height="wrap_content"> -->
+<!-- 		    <EditText android:inputType="number" android:id="@+id/smallBlindsValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal" android:paddingRight="3sp"/> -->
+<!-- 			<EditText android:inputType="number" android:id="@+id/bigBlindsValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal" android:paddingRight="3sp" android:paddingLeft="3sp"/> -->
+<!-- 			<EditText android:inputType="number" android:id="@+id/anteValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal" android:paddingLeft="3sp"/> -->
+<!-- 		</TableRow> -->
+<!--     </TableLayout> -->
+
+<!-- <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"> -->
+<!-- 	<TextView android:id="@+id/levemNumlabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="left" android:paddingBottom="10sp" android:textSize="25sp"/> -->
+
+<!-- 	<Button -->
+<!-- 	    android:id="@+id/deleteButtonBlindsDialog" -->
+<!-- 	    android:layout_width="match_parent" -->
+<!-- 	    android:layout_height="wrap_content" -->
+<!-- 	    android:layout_weight="1" -->
+<!-- 	    android:text="@string/delete_label" /> -->
+
+<!-- </LinearLayout> -->
+
+<!-- <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"> -->
+<!--    	<TextView android:id="@+id/smallBlindsValueLabel" android:text="@string/small_blinds_label" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal"/> -->
+<!-- 	<TextView android:id="@+id/bigBlindsValueLabel" android:text="@string/big_blinds_label" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal"/> -->
+<!-- 	<TextView android:id="@+id/anteValueLabel" android:text="@string/antes_label" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal"/> -->
+<!-- </LinearLayout> -->
+
+<!-- <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"> -->
+<!-- 	<EditText android:inputType="number" android:id="@+id/smallBlindsValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal" android:paddingRight="3sp"/> -->
+<!-- 	<EditText android:inputType="number" android:id="@+id/bigBlindsValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal" android:paddingRight="3sp" android:paddingLeft="3sp"/> -->
+<!-- 	<EditText android:inputType="number" android:id="@+id/anteValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center_horizontal" android:paddingLeft="3sp"/> -->
+<!-- </LinearLayout> -->
+
+<!-- <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"> -->
+<!--     <Button android:id="@+id/okButtonBlindsDialog" android:text="@string/positive_dialog" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/> -->
+<!-- 	<Button android:id="@+id/cancelButtonBlindsDialog" android:text="@string/negative_dialog" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center"/> -->
+<!-- </LinearLayout> -->
+
+</LinearLayout>
